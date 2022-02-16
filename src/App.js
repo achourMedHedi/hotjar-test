@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import { hotjar } from 'react-hotjar';
 
 function App() {
+  useEffect(() => {
+    hotjar.initialize(2824598, 6);
+    hotjar.identify("testing my id");
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
