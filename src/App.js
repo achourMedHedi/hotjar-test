@@ -1,24 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
-import useHotjar from 'react-use-hotjar';
-import uuid from 'react-uuid';
-const myCustomLogger = console.info;
+import { hotjar } from 'react-hotjar';
 
 function App() {
-  const { identifyHotjar } = useHotjar();
-  const { initHotjar } = useHotjar();
-
   useEffect(() => {
-    initHotjar(2824598, 6, false, myCustomLogger);
-  }, [initHotjar]);
-  useEffect(() => {
-    identifyHotjar(
-      uuid()+"test test test",
-      JSON.stringify({test: "test", ex: "example"}),
-      myCustomLogger
-    );
-  }, [identifyHotjar]);
+    hotjar.initialize(2824598, 6);
+    hotjar.identify({userId: "userId testing"}, {userId: "test id", extra: "extra info"});
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
