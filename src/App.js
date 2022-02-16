@@ -1,24 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import { useEffect } from 'react';
-import useHotjar from 'react-use-hotjar';
-const myCustomLogger = console.info;
+// import { useEffect } from 'react';
+// import useHotjar from 'react-use-hotjar';
+// const myCustomLogger = console.info;
 
 function App() {
-  const { initHotjar } = useHotjar();
-  const { identifyHotjar } = useHotjar();
+  // const { initHotjar } = useHotjar();
+  // const { identifyHotjar } = useHotjar();
 
-  useEffect(() => {
-    initHotjar(2824598, 6, false, myCustomLogger);
-  }, [initHotjar]);
+  // useEffect(() => {
+  //   initHotjar(2824598, 6, false, myCustomLogger);
+  // }, [initHotjar]);
   
-  useEffect(() => {
-    identifyHotjar(
-      "user id testing",
-      JSON.stringify({test: "testing", notNow: "not ow"}),
-      myCustomLogger
-    );
-  }, [identifyHotjar]);
+  // useEffect(() => {
+  //   identifyHotjar(
+  //     "user id testing",
+  //     JSON.stringify({test: "testing", notNow: "not ow"}),
+  //     myCustomLogger
+  //   );
+  // }, [identifyHotjar]);
 
   return (
     <div className="App">
