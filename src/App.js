@@ -16,12 +16,12 @@ function App() {
   useEffect(() => {
     initHotjar(2824598, 6, false, myCustomLogger);
   }, [initHotjar]);
-  
+
   useEffect(() => {
     identifyHotjar(
       "user id testing 2222222",
       {
-        user: JSON.stringify({test: "testing", notNow: "not ow"})
+        user: { test: "testing", notNow: "not ow" }
       },
     );
   }, [identifyHotjar]);
