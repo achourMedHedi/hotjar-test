@@ -20,7 +20,9 @@ function App() {
   useEffect(() => {
     identifyHotjar(
       "user id testing 2222222",
-      JSON.stringify({test: "testing", notNow: "not ow"}),
+      {
+        user: JSON.stringify({test: "testing", notNow: "not ow"})
+      },
       myCustomLogger
     );
   }, [identifyHotjar]);
