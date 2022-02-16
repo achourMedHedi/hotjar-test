@@ -10,7 +10,7 @@ function App() {
   const { initHotjar } = useHotjar();
 
   useEffect(() => {
-    initHotjar(2262285, 6, false, myCustomLogger);
+    initHotjar(2824598, 6, false, myCustomLogger);
   }, [initHotjar]);
   useEffect(() => {
     identifyHotjar(
