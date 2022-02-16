@@ -23,7 +23,6 @@ function App() {
       {
         user: JSON.stringify({test: "testing", notNow: "not ow"})
       },
-      myCustomLogger
     );
   }, [identifyHotjar]);
 
@@ -32,7 +31,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit 222 <code>src/App.js</code> and save to reload.
+          Edit 333 <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
