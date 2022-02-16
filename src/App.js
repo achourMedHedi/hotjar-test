@@ -21,7 +21,8 @@ function App() {
     identifyHotjar(
       "user id testing 2222222",
       {
-        user: { test: "testing", notNow: "not ow" }
+        user: "testing",
+        user2: "testing 2"
       },
     );
   }, [identifyHotjar]);
@@ -31,7 +32,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit 333 <code>src/App.js</code> and save to reload.
+          Edit 444 <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
