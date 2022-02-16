@@ -1,15 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
-import { hotjar } from 'react-hotjar';
+// import { hotjar } from 'react-hotjar';
 import useHotjar from 'react-use-hotjar';
 const myCustomLogger = console.info;
 
 function App() {
-  useEffect(() => {
-    hotjar.initialize(2824598, 6);
-    hotjar.identify("we are testing here email ", {userId: "123456789 ", extra: "extra 12"});
-  }, [])
+  // useEffect(() => {
+  //   hotjar.initialize(2824598, 6);
+  //   hotjar.identify("we are testing here email ", {userId: "123456789 ", extra: "extra 12"});
+  // }, [])
   const { initHotjar } = useHotjar();
   const { identifyHotjar } = useHotjar();
 
@@ -19,7 +19,7 @@ function App() {
   
   useEffect(() => {
     identifyHotjar(
-      "user id testing",
+      "user id testing 2222222",
       JSON.stringify({test: "testing", notNow: "not ow"}),
       myCustomLogger
     );
@@ -30,7 +30,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit 222 <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
